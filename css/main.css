@@ -1,6 +1,6 @@
 @charset "UTF-8";
-@import url(font-awesome.min.css);
-@import url("css.css");
+/* @import url(font-awesome.min.css);
+@import url("css.css"); */
 
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
@@ -77,10 +77,10 @@
 	body {
 		height: 100%;
 		background-color: #ffffff;
-		background-image: url(""), -moz-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("https://s0.xinger.ink/acgimg/acgurl.php");
-		background-image: url(""), -webkit-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("https://s0.xinger.ink/acgimg/acgurl.php");
-		background-image: url(""), -ms-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("https://s0.xinger.ink/acgimg/acgurl.php");
-		background-image: url(""), linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("https://s0.xinger.ink/acgimg/acgurl.php");
+		background-image: url(""), -moz-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("https://cdn.jsdelivr.net/gh/wztlink1013/CDN-Volantis@1.2/background_picture/ZIYOUZIYI.jpg");
+		background-image: url(""), -webkit-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("https://cdn.jsdelivr.net/gh/wztlink1013/CDN-Volantis@1.2/background_picture/ZIYOUZIYI.jpg");
+		background-image: url(""), -ms-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("https://cdn.jsdelivr.net/gh/wztlink1013/CDN-Volantis@1.2/background_picture/ZIYOUZIYI.jpg");
+		background-image: url(""), linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("https://cdn.jsdelivr.net/gh/wztlink1013/CDN-Volantis@1.2/background_picture/ZIYOUZIYI.jpg");
 		background-repeat: repeat,			no-repeat,			no-repeat;
 		background-size: 100px 100px, cover,				cover;
 		background-position: top left,		center center,		bottom centr;
@@ -304,7 +304,6 @@
 	}
 
 		.select-wrapper:before {
-			content: "ď?;
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
 			font-family: FontAwesome;
@@ -854,4 +853,4 @@
 		body.is-ie #wrapper {
 			height: 100%;
 		}
-		body {cursor: url(../images/H1983cf2b4b5b45f3a95f9cd50be5f9ebV.png), default;}a:hover{cursor:url(../images/H88647b1696564b9d880fdf741d728ec3a.png), pointer;}
+		/* body {cursor: url(../images/H1983cf2b4b5b45f3a95f9cd50be5f9ebV.png), default;}a:hover{cursor:url(../images/H88647b1696564b9d880fdf741d728ec3a.png), pointer;} */
