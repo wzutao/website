@@ -1,47 +1,56 @@
-# workflow name
-name: CI Hexo Blog Deploy LTS
-# master branch on push, auto run
-on: 
-  push:
-    branches:
-      - master
+# # workflow name
+# name: CI Hexo Blog Deploy LTS
+# # master branch on push, auto run
+# on: 
+#   push:
+#     branches:
+#       - master
 
-jobs:
-  Deploy-Pages: 
-    name: 自动化部署主站点
-    runs-on: ubuntu-latest
+# jobs:
+#   Deploy-Pages: 
+#     name: 自动化部署主站点
+#     runs-on: ubuntu-latest
     
-    steps:
-    # check it to your workflow can access it
-    # from: https://github.com/actions/checkout
-    - name: Checkout Repository master branch
-      uses: actions/checkout@master 
-    # from: https://github.com/actions/setup-node  
-    - name: Setup Node.js 10.x 
-      uses: actions/setup-node@master
-      with:
-        node-version: "10.x"
+#     steps:
+#     # check it to your workflow can access it
+#     # from: https://github.com/actions/checkout
+#     - name: Checkout Repository master branch
+#       uses: actions/checkout@master 
+#     # from: https://github.com/actions/setup-node  
+#     - name: Setup Node.js 10.x 
+#       uses: actions/setup-node@master
+#       with:
+#         node-version: "10.x"
 
-    - name: 加入git用户信息
-      run: | 
-        git config --global user.name 'wztlink1013' 
-        git config --global user.email '2550374815@qq.com'
+#     - name: 加入git用户信息
+#       run: | 
+#         git config --global user.name 'wztlink1013' 
+#         git config --global user.email '2550374815@qq.com'
     
-    - name: 提交commit信息 
-      run: |
-        git log --pretty=format:"%s from Github Actions at `date +"%Y-%m-%d %H:%M:%S"`" --date=short -n 1  > commit-message.log
+#     - name: 提交commit信息 
+#       run: |
+#         git log --pretty=format:"%s from Github Actions at `date +"%Y-%m-%d %H:%M:%S"`" --date=short -n 1  > commit-message.log
         
-    - name: 部署到 Github Pages 
-      env:
-        Github_Pages: github.com/wztlink1013/Website-github-io
-        Github_Token: ${{ secrets.token_GithubAPI }}
-      run: |  
-        git push --force --quiet "https://${Github_Token}@${Github_Pages}" master:master
+#     - name: 部署到 Github Pages 
+#       env:
+#         Github_Pages: github.com/wztlink1013/Website-github-io
+#         Github_Token: ${{ secrets.token_GithubAPI }}
+#       run: |  
+#         git push --force --quiet "https://${Github_Token}@${Github_Pages}" master:master
         
-    - name: 部署到 Coding Pages 
-      env:
-        Coding_Pages: e.coding.net/wztlink1013/Website.git
-        Coding_Token: ${{ secrets.token_CodingAPI }}
-        Coding_Username: ${{ secrets.Username_Coding }}
-      run: |
-        git push --force --quiet "https://${Coding_Username}:${Coding_Token}@${Coding_Pages}" master
+#     - name: 部署到 Coding Pages 
+#       env:
+#         Coding_Pages: e.coding.net/wztlink1013/Website.git
+#         Coding_Token: ${{ secrets.token_CodingAPI }}
+#         Coding_Username: ${{ secrets.Username_Coding }}
+#       run: |
+#         git clone https://${Coding_Username}:${Coding_Token}@${Coding_Pages} .coding_pages
+#         cd .coding_pages
+#         git checkout master
+#         cd ../
+#         rm -r ./public/.git/
+#         mv .coding_pages/.git/ ./public/
+#         cd ./public/
+#         git add .
+#         git commit -F ../commit-message.log
+#         git push --force --quiet "https://${Coding_Username}:${Coding_Token}@${Coding_Pages}" master:master
