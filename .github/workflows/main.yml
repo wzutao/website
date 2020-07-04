@@ -44,4 +44,4 @@ jobs:
         Coding_Token: ${{ secrets.token_CodingAPI }}
         Coding_Username: ${{ secrets.Username_Coding }}
       run: |
-        git push --force --quiet "https://${Coding_Username}:${Coding_Token}@${Coding_Pages}" master:master
+        git push --force --quiet "https://${Coding_Username}:${Coding_Token}@${Coding_Pages}" master
